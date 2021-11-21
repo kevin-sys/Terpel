@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DAL;
 using ENTITY;
-using DAL;
 using Oracle.ManagedDataAccess.Client;
+using System;
+using System.Collections.Generic;
 namespace BLL
 {
     public class ClienteServiceOracle
@@ -15,7 +12,9 @@ namespace BLL
         public ClienteServiceOracle()
         {
             string CadenaConexion = "Data Source = DESKTOP-BED3FNE; User ID = admin;Password=admin";
-            
+            //  string CadenaConexion = "TNS_ADMIN=C://Users//pc//Oracle//network//admin;USER ID=ADMIN;WALLET_LOCATION=C://Users//pc//Oracle//network//admin;DATA SOURCE=DESKTOP-BED3FNE";
+
+
             Connection = new OracleConnection(CadenaConexion);
             repositoryOracle = new ClienteRepositoryOracle(Connection);
         }
@@ -49,6 +48,28 @@ namespace BLL
             {
                 Connection.Close();
             }
+        }
+
+        public IList<Cliente> ConsultarTodos()
+        {
+
+            try
+            {
+                Connection.Open();
+                return repositoryOracle.Consultar();
+            }
+            catch (Exception )
+            {
+                Connection.Close();
+                
+                return null;
+            }
+            finally
+            {
+                Connection.Close();
+            }
+
+
         }
     }
 }

@@ -9,16 +9,11 @@
         public string Segundoapellido { get; set; }
         public string Telefono { get; set; }
         public string Email { get; set; }
-        public string Marca { get; set; }
-        public string Modelo { get; set; }
-        public string Tipodeaceite { get; set; }
-        public string Referenciaaceite { get; set; }
-        public string Tipofiltro { get; set; }
-        public string Referenciafiltro { get; set; }
-
-        public override string ToString()
-        {
-            return $"{Cedula};{Primernombre};{Segundonombre};{Primerapellido};{Segundoapellido};{Telefono};{Email};{Marca};{Modelo};{Tipodeaceite};{Tipofiltro};{Referenciaaceite};{Referenciafiltro}";
-        }
+        public string Direccion { get; set; }
+        public int Edad { get; set; }
+        public string Ciudad { get; set; }
+        public string Comuna { get; set; }
+        public string Barrio { get; set; }
+        public string Nacionalidad { get; set; }
     }
 }

@@ -14,10 +14,13 @@ namespace Terpel
 {
     public partial class FrmConsultaCliente : Form
     {
+        ClienteServiceOracle service = new ClienteServiceOracle();
 
         public FrmConsultaCliente()
         {
             InitializeComponent();
+            DgvClientes.DataSource = null;
+            LlenarTabla();
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
@@ -27,7 +30,7 @@ namespace Terpel
         private void LlenarTabla()
         {
             DgvClientes.DataSource = null;
-            DgvClientes.DataSource = ClienteService.ConsultarTodos();
+            DgvClientes.DataSource = service.ConsultarTodos();
         }
 
     }
