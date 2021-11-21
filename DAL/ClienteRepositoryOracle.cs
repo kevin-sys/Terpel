@@ -1,5 +1,6 @@
 ﻿using ENTITY;
 using Oracle.ManagedDataAccess.Client;
+using System;
 using System.Collections.Generic;
 using System.Data;
 
@@ -24,13 +25,37 @@ namespace DAL
             cliente.Segundoapellido = (string)reader["SegundoApellido"];
             cliente.Telefono = (string)reader["Telefono"];
             cliente.Email = (string)reader["Email"];
-            cliente.Marca = (string)reader["Marca"];
-            cliente.Modelo = (string)reader["Modelo"];
-            cliente.Tipodeaceite = (string)reader["TipoAceite"];
-            cliente.Referenciaaceite = (string)reader["ReferenciaAceite"];
-            cliente.Tipofiltro = (string)reader["TipoFiltro"];
-            cliente.Referenciafiltro = (string)reader["ReferenciaFiltro"];
+            cliente.Direccion = (string)reader["Direccion"];
+          
+            cliente.Edad = Convert.ToInt32(reader["Edad"]);
+
+          //  dto.TELEFONO = Convert.ToInt32(dr["TELEFONO"]);
+            cliente.Ciudad = (string)reader["Ciudad"];
+            cliente.Comuna = (string)reader["Comuna"];
+            cliente.Barrio = (string)reader["Barrio"];
+            cliente.Nacionalidad = (string)reader["Nacionalidad"];
             return cliente;
+        }
+
+        public IList<Cliente> Consultar()
+        {
+            using (var command=Connection.CreateCommand())
+            {
+                command.CommandText = "PKG_CONSULTAR.CONSULTAR_CLIENTE";
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Add("CURSORMEMORIA", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
+                using (var reader=command.ExecuteReader())
+                {
+                    clientes.Clear();
+                    while (reader.Read())
+                    {
+                        Cliente cliente = new Cliente();
+                        cliente = Mapear(reader);
+                        clientes.Add(cliente);
+                    }
+                }
+            }
+            return clientes;
         }
 
         public void Guardar(Cliente cliente)
@@ -46,12 +71,13 @@ namespace DAL
                 command.Parameters.Add(":SegundoApellido", OracleDbType.Varchar2).Value = cliente.Segundoapellido;
                 command.Parameters.Add(":Telefono", OracleDbType.Varchar2).Value = cliente.Telefono;
                 command.Parameters.Add(":Email", OracleDbType.Varchar2).Value = cliente.Email;
-                command.Parameters.Add(":Marca", OracleDbType.Varchar2).Value = cliente.Marca;
-                command.Parameters.Add(":Modelo", OracleDbType.Varchar2).Value = cliente.Modelo;
-                command.Parameters.Add(":TipoAceite", OracleDbType.Varchar2).Value = cliente.Tipodeaceite;
-                command.Parameters.Add(":ReferenciaAceite", OracleDbType.Varchar2).Value = cliente.Referenciaaceite;
-                command.Parameters.Add(":TipoFiltro", OracleDbType.Varchar2).Value = cliente.Tipofiltro;
-                command.Parameters.Add(":ReferenciaFiltro", OracleDbType.Varchar2).Value = cliente.Referenciafiltro;
+
+                command.Parameters.Add(":Direccion", OracleDbType.Varchar2).Value = cliente.Direccion;
+                command.Parameters.Add(":Edad", OracleDbType.Int16).Value = cliente.Edad;
+                command.Parameters.Add(":Ciudad", OracleDbType.Varchar2).Value = cliente.Ciudad;
+                command.Parameters.Add(":Comuna", OracleDbType.Varchar2).Value = cliente.Comuna;
+                command.Parameters.Add(":Barrio", OracleDbType.Varchar2).Value = cliente.Barrio;
+                command.Parameters.Add(":Nacionalidad", OracleDbType.Varchar2).Value = cliente.Nacionalidad;
                 command.ExecuteNonQuery();
             }
         }
