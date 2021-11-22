@@ -32,26 +32,26 @@ namespace Terpel
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProducto));
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BtnVolver = new System.Windows.Forms.PictureBox();
+            this.BtnRegistrar = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
-            this.Barrio = new System.Windows.Forms.TextBox();
+            this.TxtDescripcion = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.TxtPrimerNombre = new System.Windows.Forms.TextBox();
-            this.TxtSegundoApellido = new System.Windows.Forms.TextBox();
+            this.TxtNombre = new System.Windows.Forms.TextBox();
+            this.TxtCantidad = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.TxtPrecioVenta = new System.Windows.Forms.TextBox();
+            this.TxtPrecioCompra = new System.Windows.Forms.TextBox();
+            this.TxtID = new System.Windows.Forms.TextBox();
             this.TxtCedula = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnVolver)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnRegistrar)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -78,29 +78,30 @@ namespace Terpel
             this.label15.TabIndex = 79;
             this.label15.Text = "Registrar";
             // 
-            // pictureBox2
+            // BtnVolver
             // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(33, 288);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(80, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 78;
-            this.pictureBox2.TabStop = false;
+            this.BtnVolver.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.BtnVolver.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnVolver.Image = ((System.Drawing.Image)(resources.GetObject("BtnVolver.Image")));
+            this.BtnVolver.Location = new System.Drawing.Point(33, 288);
+            this.BtnVolver.Name = "BtnVolver";
+            this.BtnVolver.Size = new System.Drawing.Size(80, 50);
+            this.BtnVolver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.BtnVolver.TabIndex = 78;
+            this.BtnVolver.TabStop = false;
             // 
-            // pictureBox1
+            // BtnRegistrar
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(747, 288);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(80, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 77;
-            this.pictureBox1.TabStop = false;
+            this.BtnRegistrar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.BtnRegistrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnRegistrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnRegistrar.Image")));
+            this.BtnRegistrar.Location = new System.Drawing.Point(747, 288);
+            this.BtnRegistrar.Name = "BtnRegistrar";
+            this.BtnRegistrar.Size = new System.Drawing.Size(80, 50);
+            this.BtnRegistrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.BtnRegistrar.TabIndex = 77;
+            this.BtnRegistrar.TabStop = false;
+            this.BtnRegistrar.Click += new System.EventHandler(this.BtnRegistrar_Click);
             // 
             // panel1
             // 
@@ -123,13 +124,13 @@ namespace Terpel
             this.label14.TabIndex = 28;
             this.label14.Text = "Registrar productos";
             // 
-            // Barrio
+            // TxtDescripcion
             // 
-            this.Barrio.Location = new System.Drawing.Point(449, 51);
-            this.Barrio.Multiline = true;
-            this.Barrio.Name = "Barrio";
-            this.Barrio.Size = new System.Drawing.Size(275, 97);
-            this.Barrio.TabIndex = 71;
+            this.TxtDescripcion.Location = new System.Drawing.Point(449, 51);
+            this.TxtDescripcion.Multiline = true;
+            this.TxtDescripcion.Name = "TxtDescripcion";
+            this.TxtDescripcion.Size = new System.Drawing.Size(275, 97);
+            this.TxtDescripcion.TabIndex = 71;
             // 
             // label7
             // 
@@ -191,39 +192,61 @@ namespace Terpel
             this.label1.TabIndex = 56;
             this.label1.Text = "ID";
             // 
-            // TxtPrimerNombre
+            // TxtNombre
             // 
-            this.TxtPrimerNombre.Location = new System.Drawing.Point(191, 51);
-            this.TxtPrimerNombre.Name = "TxtPrimerNombre";
-            this.TxtPrimerNombre.Size = new System.Drawing.Size(151, 23);
-            this.TxtPrimerNombre.TabIndex = 53;
+            this.TxtNombre.Location = new System.Drawing.Point(191, 51);
+            this.TxtNombre.Name = "TxtNombre";
+            this.TxtNombre.Size = new System.Drawing.Size(151, 23);
+            this.TxtNombre.TabIndex = 53;
+            this.TxtNombre.TextChanged += new System.EventHandler(this.TxtPrimerNombre_TextChanged);
             // 
-            // TxtSegundoApellido
+            // TxtCantidad
             // 
-            this.TxtSegundoApellido.Location = new System.Drawing.Point(15, 125);
-            this.TxtSegundoApellido.Name = "TxtSegundoApellido";
-            this.TxtSegundoApellido.Size = new System.Drawing.Size(55, 23);
-            this.TxtSegundoApellido.TabIndex = 51;
+            this.TxtCantidad.Location = new System.Drawing.Point(15, 125);
+            this.TxtCantidad.Name = "TxtCantidad";
+            this.TxtCantidad.Size = new System.Drawing.Size(55, 23);
+            this.TxtCantidad.TabIndex = 51;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.Barrio);
+            this.panel2.Controls.Add(this.TxtPrecioVenta);
+            this.panel2.Controls.Add(this.TxtPrecioCompra);
+            this.panel2.Controls.Add(this.TxtID);
+            this.panel2.Controls.Add(this.TxtDescripcion);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.TxtSegundoApellido);
-            this.panel2.Controls.Add(this.TxtPrimerNombre);
+            this.panel2.Controls.Add(this.TxtCantidad);
+            this.panel2.Controls.Add(this.TxtNombre);
             this.panel2.Location = new System.Drawing.Point(43, 83);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(796, 187);
             this.panel2.TabIndex = 76;
+            // 
+            // TxtPrecioVenta
+            // 
+            this.TxtPrecioVenta.Location = new System.Drawing.Point(193, 125);
+            this.TxtPrecioVenta.Name = "TxtPrecioVenta";
+            this.TxtPrecioVenta.Size = new System.Drawing.Size(100, 23);
+            this.TxtPrecioVenta.TabIndex = 83;
+            // 
+            // TxtPrecioCompra
+            // 
+            this.TxtPrecioCompra.Location = new System.Drawing.Point(87, 125);
+            this.TxtPrecioCompra.Name = "TxtPrecioCompra";
+            this.TxtPrecioCompra.Size = new System.Drawing.Size(100, 23);
+            this.TxtPrecioCompra.TabIndex = 82;
+            // 
+            // TxtID
+            // 
+            this.TxtID.Location = new System.Drawing.Point(15, 51);
+            this.TxtID.Name = "TxtID";
+            this.TxtID.Size = new System.Drawing.Size(151, 23);
+            this.TxtID.TabIndex = 81;
             // 
             // TxtCedula
             // 
@@ -231,27 +254,6 @@ namespace Terpel
             this.TxtCedula.Name = "TxtCedula";
             this.TxtCedula.Size = new System.Drawing.Size(151, 23);
             this.TxtCedula.TabIndex = 49;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(15, 51);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(151, 23);
-            this.textBox1.TabIndex = 81;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(87, 125);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 23);
-            this.textBox2.TabIndex = 82;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(193, 125);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 23);
-            this.textBox3.TabIndex = 83;
             // 
             // FrmProducto
             // 
@@ -261,8 +263,8 @@ namespace Terpel
             this.ClientSize = new System.Drawing.Size(864, 382);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.BtnVolver);
+            this.Controls.Add(this.BtnRegistrar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.TxtCedula);
@@ -270,8 +272,8 @@ namespace Terpel
             this.Name = "FrmProducto";
             this.Text = "Registro de productos";
             this.Load += new System.EventHandler(this.FrmProducto_Load_1);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnVolver)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnRegistrar)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -285,23 +287,23 @@ namespace Terpel
 
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox BtnVolver;
+        private System.Windows.Forms.PictureBox BtnRegistrar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox Barrio;
+        private System.Windows.Forms.TextBox TxtDescripcion;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox TxtPrimerNombre;
-        private System.Windows.Forms.TextBox TxtSegundoApellido;
+        private System.Windows.Forms.TextBox TxtNombre;
+        private System.Windows.Forms.TextBox TxtCantidad;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox TxtCedula;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TxtID;
+        private System.Windows.Forms.TextBox TxtPrecioVenta;
+        private System.Windows.Forms.TextBox TxtPrecioCompra;
     }
 }

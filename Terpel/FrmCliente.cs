@@ -32,7 +32,7 @@ namespace Terpel
 
         private void GuardarOracle()
         {
-            var respueta = new ClienteServiceOracle.Respuesta();
+            var respuesta = new ClienteServiceOracle.Respuesta();
             try
             {
                 Cliente cliente = new Cliente();
@@ -52,8 +52,8 @@ namespace Terpel
                 cliente.Nacionalidad = Nacionalidad.Text.Trim();
 
 
-                respueta = serviceOracle.Guardar(cliente);
-                MessageBox.Show(respueta.Message, "Resultado de guardar", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                respuesta = serviceOracle.Guardar(cliente);
+                MessageBox.Show(respuesta.Message, "Resultado de guardar", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 
             }
             catch (Exception)
@@ -61,24 +61,13 @@ namespace Terpel
 
                 throw;
             }
+
+            LimpiarCajas();
         }
 
 
       
-        private Cliente MapearCliente()
-        {
-            cliente = new Cliente();
-            cliente.Cedula = TxtCedula.Text.Trim();
-            cliente.Primernombre = TxtPrimerNombre.Text.Trim();
-            cliente.Segundonombre = TxtSegundoNombre.Text.Trim();
-            cliente.Primerapellido = TxtPrimerApellido.Text.Trim();
-            cliente.Segundoapellido = TxtSegundoApellido.Text.Trim();
-            cliente.Telefono = TxtTelefono.Text.Trim();
-            cliente.Email = TxtEmail.Text.Trim();
-          
-            return cliente;
-
-        }
+      
 
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
