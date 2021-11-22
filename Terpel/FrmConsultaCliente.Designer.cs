@@ -30,27 +30,18 @@ namespace Terpel
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConsultaCliente));
-            this.DgvClientes = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvClientes)).BeginInit();
+            this.DgvClientes = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvClientes)).BeginInit();
             this.SuspendLayout();
-            // 
-            // DgvClientes
-            // 
-            this.DgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvClientes.Location = new System.Drawing.Point(27, 81);
-            this.DgvClientes.Name = "DgvClientes";
-            this.DgvClientes.RowTemplate.Height = 25;
-            this.DgvClientes.Size = new System.Drawing.Size(761, 185);
-            this.DgvClientes.TabIndex = 0;
             // 
             // panel1
             // 
@@ -119,38 +110,47 @@ namespace Terpel
             this.pictureBox2.TabIndex = 50;
             this.pictureBox2.TabStop = false;
             // 
+            // DgvClientes
+            // 
+            this.DgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvClientes.Location = new System.Drawing.Point(27, 75);
+            this.DgvClientes.Name = "DgvClientes";
+            this.DgvClientes.RowTemplate.Height = 25;
+            this.DgvClientes.Size = new System.Drawing.Size(761, 150);
+            this.DgvClientes.TabIndex = 52;
+            // 
             // FrmConsultaCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(816, 352);
+            this.Controls.Add(this.DgvClientes);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.DgvClientes);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmConsultaCliente";
             this.Text = "Listado de clientes";
-            ((System.ComponentModel.ISupportInitialize)(this.DgvClientes)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView DgvClientes;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.DataGridView DgvClientes;
     }
 }

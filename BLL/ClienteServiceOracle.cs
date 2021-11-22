@@ -55,19 +55,23 @@ namespace BLL
 
             try
             {
+
                 Connection.Open();
                 return repositoryOracle.Consultar();
             }
-            catch (Exception )
+
+            catch (Exception e)
             {
                 Connection.Close();
-                
+
                 return null;
             }
             finally
             {
                 Connection.Close();
             }
+
+
 
 
         }

@@ -19,7 +19,7 @@ namespace Terpel
         public FrmConsultaCliente()
         {
             InitializeComponent();
-            DgvClientes.DataSource = null;
+           // DgvClientes.DataSource = null;
             LlenarTabla();
         }
 
@@ -27,7 +27,7 @@ namespace Terpel
         {
            
         }
-        private void LlenarTabla()
+        private  void LlenarTabla()
         {
             DgvClientes.DataSource = null;
             DgvClientes.DataSource = service.ConsultarTodos();

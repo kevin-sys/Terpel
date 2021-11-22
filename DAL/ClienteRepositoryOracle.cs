@@ -18,22 +18,22 @@ namespace DAL
         public Cliente Mapear(OracleDataReader reader)
         {
             var cliente = new Cliente();
-            cliente.Cedula = (string)reader["Cedula"];
-            cliente.Primernombre = (string)reader["PrimerNombre"];
-            cliente.Segundonombre = (string)reader["SegundoNombre"];
-            cliente.Primerapellido = (string)reader["PrimerApellido"];
-            cliente.Segundoapellido = (string)reader["SegundoApellido"];
-            cliente.Telefono = (string)reader["Telefono"];
-            cliente.Email = (string)reader["Email"];
-            cliente.Direccion = (string)reader["Direccion"];
-          
+            cliente.Cedula = Convert.ToString(reader["Cedula"]);
+            cliente.Primernombre = Convert.ToString(reader["PrimerNombre"]);
+            cliente.Segundonombre = Convert.ToString(reader["SegundoNombre"]);
+            cliente.Primerapellido = Convert.ToString(reader["PrimerApellido"]);
+            cliente.Segundoapellido = Convert.ToString(reader["SegundoApellido"]);
+            cliente.Telefono = Convert.ToString(reader["Telefono"]);
+            cliente.Email = Convert.ToString(reader["Email"]);
+            cliente.Direccion = Convert.ToString(reader["Direccion"]);
+
             cliente.Edad = Convert.ToInt32(reader["Edad"]);
 
-          //  dto.TELEFONO = Convert.ToInt32(dr["TELEFONO"]);
-            cliente.Ciudad = (string)reader["Ciudad"];
-            cliente.Comuna = (string)reader["Comuna"];
-            cliente.Barrio = (string)reader["Barrio"];
-            cliente.Nacionalidad = (string)reader["Nacionalidad"];
+          
+            cliente.Ciudad = Convert.ToString(reader["Ciudad"]);
+            cliente.Comuna = Convert.ToString(reader["Comuna"]);
+            cliente.Barrio = Convert.ToString(reader["Barrio"]);
+            cliente.Nacionalidad = Convert.ToString(reader["Nacionalidad"]);
             return cliente;
         }
 

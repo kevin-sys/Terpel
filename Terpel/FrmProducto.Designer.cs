@@ -117,7 +117,7 @@ namespace Terpel
             this.label14.CausesValidation = false;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(283, 1);
+            this.label14.Location = new System.Drawing.Point(245, 1);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(289, 40);
             this.label14.TabIndex = 28;

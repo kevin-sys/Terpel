@@ -404,7 +404,7 @@ namespace Terpel
             this.Controls.Add(this.TxtPrimerApellido);
             this.Controls.Add(this.TxtCedula);
             this.Controls.Add(this.panel2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmCliente";
             this.Text = "Registro de clientes";
             this.Load += new System.EventHandler(this.FrmCliente_Load);
