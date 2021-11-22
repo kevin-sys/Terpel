@@ -29,6 +29,7 @@ namespace Terpel
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCliente));
             this.TxtCedula = new System.Windows.Forms.TextBox();
             this.TxtPrimerApellido = new System.Windows.Forms.TextBox();
             this.TxtSegundoApellido = new System.Windows.Forms.TextBox();
@@ -43,11 +44,7 @@ namespace Terpel
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.BtnGuardar = new System.Windows.Forms.Button();
-            this.BtnBuscar = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
-            this.BtnModificar = new System.Windows.Forms.Button();
-            this.BtnEliminar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.Direccion = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -60,53 +57,62 @@ namespace Terpel
             this.Edad = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.Nacionalidad = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // TxtCedula
             // 
-            this.TxtCedula.Location = new System.Drawing.Point(27, 74);
+            this.TxtCedula.Location = new System.Drawing.Point(27, 123);
             this.TxtCedula.Name = "TxtCedula";
             this.TxtCedula.Size = new System.Drawing.Size(151, 23);
             this.TxtCedula.TabIndex = 0;
             // 
             // TxtPrimerApellido
             // 
-            this.TxtPrimerApellido.Location = new System.Drawing.Point(637, 74);
+            this.TxtPrimerApellido.Location = new System.Drawing.Point(637, 123);
             this.TxtPrimerApellido.Name = "TxtPrimerApellido";
             this.TxtPrimerApellido.Size = new System.Drawing.Size(151, 23);
             this.TxtPrimerApellido.TabIndex = 1;
             // 
             // TxtSegundoApellido
             // 
-            this.TxtSegundoApellido.Location = new System.Drawing.Point(27, 156);
+            this.TxtSegundoApellido.Location = new System.Drawing.Point(27, 197);
             this.TxtSegundoApellido.Name = "TxtSegundoApellido";
             this.TxtSegundoApellido.Size = new System.Drawing.Size(151, 23);
             this.TxtSegundoApellido.TabIndex = 3;
             // 
             // TxtEmail
             // 
-            this.TxtEmail.Location = new System.Drawing.Point(426, 156);
+            this.TxtEmail.Location = new System.Drawing.Point(426, 197);
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.Size = new System.Drawing.Size(151, 23);
             this.TxtEmail.TabIndex = 6;
             // 
             // TxtTelefono
             // 
-            this.TxtTelefono.Location = new System.Drawing.Point(235, 156);
+            this.TxtTelefono.Location = new System.Drawing.Point(235, 197);
             this.TxtTelefono.Name = "TxtTelefono";
             this.TxtTelefono.Size = new System.Drawing.Size(151, 23);
             this.TxtTelefono.TabIndex = 10;
             // 
             // TxtSegundoNombre
             // 
-            this.TxtSegundoNombre.Location = new System.Drawing.Point(426, 74);
+            this.TxtSegundoNombre.Location = new System.Drawing.Point(426, 123);
             this.TxtSegundoNombre.Name = "TxtSegundoNombre";
             this.TxtSegundoNombre.Size = new System.Drawing.Size(151, 23);
             this.TxtSegundoNombre.TabIndex = 9;
             // 
             // TxtPrimerNombre
             // 
-            this.TxtPrimerNombre.Location = new System.Drawing.Point(235, 74);
+            this.TxtPrimerNombre.Location = new System.Drawing.Point(235, 123);
             this.TxtPrimerNombre.Name = "TxtPrimerNombre";
             this.TxtPrimerNombre.Size = new System.Drawing.Size(151, 23);
             this.TxtPrimerNombre.TabIndex = 8;
@@ -114,7 +120,8 @@ namespace Terpel
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 56);
+            this.label1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label1.Location = new System.Drawing.Point(27, 105);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 15);
             this.label1.TabIndex = 13;
@@ -124,7 +131,8 @@ namespace Terpel
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(235, 56);
+            this.label2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label2.Location = new System.Drawing.Point(235, 105);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 15);
             this.label2.TabIndex = 14;
@@ -133,7 +141,8 @@ namespace Terpel
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(426, 56);
+            this.label3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label3.Location = new System.Drawing.Point(426, 105);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(101, 15);
             this.label3.TabIndex = 15;
@@ -142,7 +151,8 @@ namespace Terpel
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(637, 56);
+            this.label4.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label4.Location = new System.Drawing.Point(637, 105);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(89, 15);
             this.label4.TabIndex = 16;
@@ -151,7 +161,8 @@ namespace Terpel
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(27, 138);
+            this.label5.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label5.Location = new System.Drawing.Point(27, 179);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(101, 15);
             this.label5.TabIndex = 17;
@@ -160,7 +171,8 @@ namespace Terpel
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(235, 138);
+            this.label6.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label6.Location = new System.Drawing.Point(235, 179);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 15);
             this.label6.TabIndex = 18;
@@ -169,78 +181,29 @@ namespace Terpel
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(426, 138);
+            this.label7.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label7.Location = new System.Drawing.Point(426, 179);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(36, 15);
             this.label7.TabIndex = 19;
             this.label7.Text = "Email";
             // 
-            // BtnGuardar
-            // 
-            this.BtnGuardar.BackColor = System.Drawing.Color.Lime;
-            this.BtnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnGuardar.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnGuardar.Location = new System.Drawing.Point(663, 283);
-            this.BtnGuardar.Name = "BtnGuardar";
-            this.BtnGuardar.Size = new System.Drawing.Size(125, 36);
-            this.BtnGuardar.TabIndex = 26;
-            this.BtnGuardar.Text = "GUARDAR";
-            this.BtnGuardar.UseVisualStyleBackColor = false;
-            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
-            // 
-            // BtnBuscar
-            // 
-            this.BtnBuscar.BackColor = System.Drawing.Color.Blue;
-            this.BtnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnBuscar.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnBuscar.Location = new System.Drawing.Point(104, 295);
-            this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.Size = new System.Drawing.Size(125, 36);
-            this.BtnBuscar.TabIndex = 27;
-            this.BtnBuscar.Text = "BUSCAR";
-            this.BtnBuscar.UseVisualStyleBackColor = false;
-            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label14.Location = new System.Drawing.Point(306, 9);
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(283, 1);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(235, 30);
+            this.label14.Size = new System.Drawing.Size(253, 40);
             this.label14.TabIndex = 28;
-            this.label14.Text = "GESTIÓN DE CLIENTES";
-            // 
-            // BtnModificar
-            // 
-            this.BtnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.BtnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnModificar.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnModificar.Location = new System.Drawing.Point(261, 295);
-            this.BtnModificar.Name = "BtnModificar";
-            this.BtnModificar.Size = new System.Drawing.Size(125, 36);
-            this.BtnModificar.TabIndex = 29;
-            this.BtnModificar.Text = "MODIFICAR";
-            this.BtnModificar.UseVisualStyleBackColor = false;
-            this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
-            // 
-            // BtnEliminar
-            // 
-            this.BtnEliminar.BackColor = System.Drawing.Color.Red;
-            this.BtnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnEliminar.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnEliminar.Location = new System.Drawing.Point(402, 295);
-            this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(125, 36);
-            this.BtnEliminar.TabIndex = 30;
-            this.BtnEliminar.Text = "ELIMINAR";
-            this.BtnEliminar.UseVisualStyleBackColor = false;
-            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
+            this.label14.Text = "Registrar clientes";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(637, 138);
+            this.label8.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label8.Location = new System.Drawing.Point(637, 179);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(57, 15);
             this.label8.TabIndex = 32;
@@ -248,7 +211,7 @@ namespace Terpel
             // 
             // Direccion
             // 
-            this.Direccion.Location = new System.Drawing.Point(637, 156);
+            this.Direccion.Location = new System.Drawing.Point(637, 197);
             this.Direccion.Name = "Direccion";
             this.Direccion.Size = new System.Drawing.Size(151, 23);
             this.Direccion.TabIndex = 31;
@@ -256,7 +219,8 @@ namespace Terpel
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(426, 218);
+            this.label9.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label9.Location = new System.Drawing.Point(426, 253);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(38, 15);
             this.label9.TabIndex = 40;
@@ -264,7 +228,7 @@ namespace Terpel
             // 
             // Barrio
             // 
-            this.Barrio.Location = new System.Drawing.Point(426, 236);
+            this.Barrio.Location = new System.Drawing.Point(426, 271);
             this.Barrio.Name = "Barrio";
             this.Barrio.Size = new System.Drawing.Size(151, 23);
             this.Barrio.TabIndex = 39;
@@ -272,7 +236,8 @@ namespace Terpel
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(267, 218);
+            this.label10.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label10.Location = new System.Drawing.Point(267, 253);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(53, 15);
             this.label10.TabIndex = 38;
@@ -281,7 +246,8 @@ namespace Terpel
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(100, 218);
+            this.label11.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label11.Location = new System.Drawing.Point(100, 253);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(45, 15);
             this.label11.TabIndex = 37;
@@ -290,7 +256,8 @@ namespace Terpel
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(27, 218);
+            this.label12.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label12.Location = new System.Drawing.Point(27, 253);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(33, 15);
             this.label12.TabIndex = 36;
@@ -298,21 +265,21 @@ namespace Terpel
             // 
             // Ciudad
             // 
-            this.Ciudad.Location = new System.Drawing.Point(100, 236);
+            this.Ciudad.Location = new System.Drawing.Point(100, 271);
             this.Ciudad.Name = "Ciudad";
             this.Ciudad.Size = new System.Drawing.Size(151, 23);
             this.Ciudad.TabIndex = 35;
             // 
             // Comuna
             // 
-            this.Comuna.Location = new System.Drawing.Point(267, 236);
+            this.Comuna.Location = new System.Drawing.Point(267, 271);
             this.Comuna.Name = "Comuna";
             this.Comuna.Size = new System.Drawing.Size(151, 23);
             this.Comuna.TabIndex = 34;
             // 
             // Edad
             // 
-            this.Edad.Location = new System.Drawing.Point(27, 236);
+            this.Edad.Location = new System.Drawing.Point(27, 271);
             this.Edad.Name = "Edad";
             this.Edad.Size = new System.Drawing.Size(67, 23);
             this.Edad.TabIndex = 33;
@@ -320,7 +287,8 @@ namespace Terpel
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(637, 218);
+            this.label13.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label13.Location = new System.Drawing.Point(637, 253);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(77, 15);
             this.label13.TabIndex = 42;
@@ -328,16 +296,87 @@ namespace Terpel
             // 
             // Nacionalidad
             // 
-            this.Nacionalidad.Location = new System.Drawing.Point(637, 236);
+            this.Nacionalidad.Location = new System.Drawing.Point(637, 271);
             this.Nacionalidad.Name = "Nacionalidad";
             this.Nacionalidad.Size = new System.Drawing.Size(151, 23);
             this.Nacionalidad.TabIndex = 41;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.label14);
+            this.panel1.Location = new System.Drawing.Point(27, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(761, 45);
+            this.panel1.TabIndex = 43;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel2.Location = new System.Drawing.Point(12, 72);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(796, 240);
+            this.panel2.TabIndex = 44;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(728, 318);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(80, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 45;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(14, 318);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(80, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 46;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.White;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label15.Location = new System.Drawing.Point(728, 371);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(78, 21);
+            this.label15.TabIndex = 47;
+            this.label15.Text = "Registrar";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.White;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label16.Location = new System.Drawing.Point(23, 371);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(59, 21);
+            this.label16.TabIndex = 48;
+            this.label16.Text = "Volver";
             // 
             // FrmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(854, 407);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(825, 412);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.Nacionalidad);
             this.Controls.Add(this.label9);
@@ -350,11 +389,6 @@ namespace Terpel
             this.Controls.Add(this.Edad);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.Direccion);
-            this.Controls.Add(this.BtnEliminar);
-            this.Controls.Add(this.BtnModificar);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.BtnBuscar);
-            this.Controls.Add(this.BtnGuardar);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -369,9 +403,15 @@ namespace Terpel
             this.Controls.Add(this.TxtSegundoApellido);
             this.Controls.Add(this.TxtPrimerApellido);
             this.Controls.Add(this.TxtCedula);
+            this.Controls.Add(this.panel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "FrmCliente";
-            this.Text = "FrmCliente";
+            this.Text = "Registro de clientes";
             this.Load += new System.EventHandler(this.FrmCliente_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -393,11 +433,7 @@ namespace Terpel
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button BtnGuardar;
-        private System.Windows.Forms.Button BtnBuscar;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button BtnModificar;
-        private System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox Direccion;
         private System.Windows.Forms.Label label9;
@@ -410,5 +446,11 @@ namespace Terpel
         private System.Windows.Forms.TextBox Edad;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox Nacionalidad;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
     }
 }

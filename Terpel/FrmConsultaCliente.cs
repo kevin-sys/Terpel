@@ -25,7 +25,7 @@ namespace Terpel
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            LlenarTabla();
+           
         }
         private void LlenarTabla()
         {
@@ -33,5 +33,9 @@ namespace Terpel
             DgvClientes.DataSource = service.ConsultarTodos();
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            LlenarTabla();
+        }
     }
 }

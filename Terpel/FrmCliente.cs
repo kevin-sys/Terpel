@@ -27,7 +27,7 @@ namespace Terpel
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
 
-            GuardarOracle();
+           
         }
 
         private void GuardarOracle()
@@ -107,6 +107,16 @@ namespace Terpel
 
         
 
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            GuardarOracle();
         }
     }
 }
