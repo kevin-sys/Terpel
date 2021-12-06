@@ -13,7 +13,8 @@ Aplicativo Desktop realizado por Gómez K y Menco D.
 <a href="https://www.linkedin.com/in/kevin-gc-1aba6a165"><img src="https://1000logos.net/wp-content/uploads/2017/03/Linkedin-Logo.png" alt="Build Status" height=50></a>
 
 </p>
-<br>
-<label><b>Invitame un café</b></label>
+<label><b>Invitame un café</b>
 <a href="https://paypal.me/kevin481447?locale.x=es_XC"><img src="https://1000logos.net/wp-content/uploads/2017/03/Linkedin-Logo.png" alt="Build Status" height=50></a>
+</label>
+
 
