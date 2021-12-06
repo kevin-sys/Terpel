@@ -7,7 +7,7 @@ namespace Terpel
 {
     public partial class FrmCliente : Form
     {
-        Cliente cliente;
+      
         ClienteServiceOracle serviceOracle = new ClienteServiceOracle();
         public FrmCliente()
         {
@@ -27,7 +27,7 @@ namespace Terpel
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
 
-           
+
         }
 
         private void GuardarOracle()
@@ -66,13 +66,13 @@ namespace Terpel
         }
 
 
-      
-      
+
+
 
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
 
-         
+
         }
 
         private void LimpiarCajas()
@@ -84,17 +84,25 @@ namespace Terpel
             TxtPrimerApellido.Text = "";
             TxtTelefono.Text = "";
             TxtEmail.Text = "";
-     
+            Direccion.Text = "";
+            Edad.Text = "";
+            Ciudad.Text = "";
+            Comuna.Text = "";
+            Barrio.Text = "";
+            Nacionalidad.Text = "";
+
+
+
         }
         private void BtnModificar_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
 
-        
+
 
         }
 
@@ -106,6 +114,59 @@ namespace Terpel
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             GuardarOracle();
+        }
+
+        private void BtnEliminar_Click_1(object sender, EventArgs e)
+        {
+            var respuesta = MessageBox.Show("ESTA SEGURO DE ELIMINAR EL REGISTRO", "MENSAJE DE ELIMINACIÓN", MessageBoxButtons.YesNo);
+            if (respuesta == DialogResult.Yes)
+            {
+                ClienteServiceOracle clienteService = new ClienteServiceOracle();
+                string identificacion = TxtCedula.Text;
+                string mensaje = clienteService.Eliminar(identificacion);
+                MessageBox.Show(mensaje);
+
+            }
+        }
+
+        private void BtnBuscar_Click_1(object sender, EventArgs e)
+        {
+            ClienteServiceOracle clienteService = new ClienteServiceOracle();
+            string identificacion = TxtCedula.Text;
+            if (identificacion != "")
+            {
+                Cliente cliente = clienteService.BuscarID(identificacion);
+
+                if (cliente != null)
+                {
+                    TxtCedula.Text = cliente.Cedula;
+                    TxtPrimerNombre.Text = cliente.Primernombre;
+                    TxtSegundoNombre.Text = cliente.Segundonombre;
+                    TxtPrimerApellido.Text = cliente.Primerapellido;
+                    TxtSegundoApellido.Text = cliente.Segundoapellido;
+                    TxtTelefono.Text = cliente.Telefono;
+                    TxtEmail.Text = cliente.Email;
+                    Direccion.Text = cliente.Direccion;
+
+                    Edad.Text = cliente.Edad.ToString();
+                    Ciudad.Text = cliente.Ciudad;
+                    Comuna.Text = cliente.Comuna;
+                    Barrio.Text = cliente.Barrio;
+                    Nacionalidad.Text = cliente.Nacionalidad;
+
+
+                }
+                else
+                {
+                    MessageBox.Show($"EL CLIENTE CON LA IDENTIFICACIÓN:  {identificacion} NO SE ENCUENTRA EN NUESTRA BASE DE DATOS");
+
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("DIGITE LA CEDULA");
+            }
         }
     }
 }

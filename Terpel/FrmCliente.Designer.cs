@@ -63,9 +63,15 @@ namespace Terpel
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.BtnEliminar = new System.Windows.Forms.PictureBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.BtnBuscar = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnEliminar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnBuscar)).BeginInit();
             this.SuspendLayout();
             // 
             // TxtCedula
@@ -366,12 +372,64 @@ namespace Terpel
             this.label16.TabIndex = 48;
             this.label16.Text = "Volver";
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.White;
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label17.Location = new System.Drawing.Point(189, 371);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(74, 21);
+            this.label17.TabIndex = 50;
+            this.label17.Text = "Eliminar";
+            // 
+            // BtnEliminar
+            // 
+            this.BtnEliminar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.BtnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("BtnEliminar.Image")));
+            this.BtnEliminar.Location = new System.Drawing.Point(189, 318);
+            this.BtnEliminar.Name = "BtnEliminar";
+            this.BtnEliminar.Size = new System.Drawing.Size(80, 50);
+            this.BtnEliminar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.BtnEliminar.TabIndex = 49;
+            this.BtnEliminar.TabStop = false;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click_1);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.White;
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label18.Location = new System.Drawing.Point(459, 371);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(60, 21);
+            this.label18.TabIndex = 52;
+            this.label18.Text = "Buscar";
+            // 
+            // BtnBuscar
+            // 
+            this.BtnBuscar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.BtnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscar.Image")));
+            this.BtnBuscar.Location = new System.Drawing.Point(459, 318);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.Size = new System.Drawing.Size(80, 50);
+            this.BtnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.BtnBuscar.TabIndex = 51;
+            this.BtnBuscar.TabStop = false;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click_1);
+            // 
             // FrmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(825, 412);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.BtnBuscar);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.pictureBox2);
@@ -412,6 +470,8 @@ namespace Terpel
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnEliminar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnBuscar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -452,5 +512,9 @@ namespace Terpel
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.PictureBox BtnEliminar;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.PictureBox BtnBuscar;
     }
 }
