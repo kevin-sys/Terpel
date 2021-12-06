@@ -7,7 +7,7 @@ namespace Terpel
 {
     public partial class FrmProducto : Form
     {
-        Producto producto;
+        
         ProductoServiceOracle service = new ProductoServiceOracle();
         public FrmProducto()
         {

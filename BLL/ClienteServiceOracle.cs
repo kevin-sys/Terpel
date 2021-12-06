@@ -12,7 +12,6 @@ namespace BLL
         public ClienteServiceOracle()
         {
             string CadenaConexion = "Data Source = DESKTOP-BED3FNE; User ID = admin;Password=admin";
-            //  string CadenaConexion = "TNS_ADMIN=C://Users//pc//Oracle//network//admin;USER ID=ADMIN;WALLET_LOCATION=C://Users//pc//Oracle//network//admin;DATA SOURCE=DESKTOP-BED3FNE";
 
 
             Connection = new OracleConnection(CadenaConexion);
@@ -60,7 +59,7 @@ namespace BLL
                 return repositoryOracle.Consultar();
             }
 
-            catch (Exception e)
+            catch (Exception)
             {
                 Connection.Close();
 
@@ -75,5 +74,61 @@ namespace BLL
 
 
         }
+
+        //public string Eliminar(string identificacion)
+        //{
+        //    try
+        //    {
+        //       // Cliente cliente = new Cliente(); 
+        //        Connection.Open();
+
+        //        repositoryOracle.Eliminar(identificacion);
+        //        Connection.Close();
+        //        return ($"El registro se ha eliminado satisfactoriamente.");
+
+
+        //    }
+        //    catch (Exception)
+        //    {
+
+        //        return ($"No existe un cliente con esa cedula");
+        //    }
+        //    finally { Connection.Close(); }
+
+        //}
+
+        public string Eliminar(string identificacion)
+        {
+           
+            Connection.Open();
+            string mensaje=repositoryOracle.Eliminar(identificacion);
+
+            Connection.Close();
+            return mensaje;
+        }
+
+        
+      
+        public Cliente BuscarID(string identificacion)
+        {
+            Cliente persona = new Cliente();
+            try
+            {
+                Connection.Open();
+                return repositoryOracle.Buscar(identificacion);
+            }
+            catch (Exception e)
+            {
+                string mensaje = " ERROR EN LA BASE DE DATOS " + e.Message;
+                return null;
+            }
+            finally
+            {
+                Connection.Close();
+            }
+        }
+
+
+
     }
 }

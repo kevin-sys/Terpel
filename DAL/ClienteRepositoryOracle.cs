@@ -14,7 +14,7 @@ namespace DAL
         {
             Connection = connection;
         }
-        
+
         public Cliente Mapear(OracleDataReader reader)
         {
             var cliente = new Cliente();
@@ -29,7 +29,7 @@ namespace DAL
 
             cliente.Edad = Convert.ToInt32(reader["Edad"]);
 
-          
+
             cliente.Ciudad = Convert.ToString(reader["Ciudad"]);
             cliente.Comuna = Convert.ToString(reader["Comuna"]);
             cliente.Barrio = Convert.ToString(reader["Barrio"]);
@@ -39,12 +39,12 @@ namespace DAL
 
         public IList<Cliente> Consultar()
         {
-            using (var command=Connection.CreateCommand())
+            using (var command = Connection.CreateCommand())
             {
                 command.CommandText = "PKG_CONSULTAR.CONSULTAR_CLIENTE";
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.Add("CURSORMEMORIA", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
-                using (var reader=command.ExecuteReader())
+                using (var reader = command.ExecuteReader())
                 {
                     clientes.Clear();
                     while (reader.Read())
@@ -58,9 +58,11 @@ namespace DAL
             return clientes;
         }
 
+
+
         public void Guardar(Cliente cliente)
         {
-            using (var command=Connection.CreateCommand())
+            using (var command = Connection.CreateCommand())
             {
                 command.CommandText = "PKG_INSERTAR.INSERTAR_CLIENTE";
                 command.CommandType = CommandType.StoredProcedure;
@@ -81,6 +83,65 @@ namespace DAL
                 command.ExecuteNonQuery();
             }
         }
+
+
+        //public void Eliminar(string identificacion)
+        //{
+        //    using (var command = Connection.CreateCommand())
+
+        //    {
+        //        command.CommandText = "DELETE_CLIENTE";
+        //        command.CommandType = CommandType.StoredProcedure;
+        //        command.Parameters.Add(":C_CEDULA", OracleDbType.Varchar2).Value = identificacion;
+        //        command.ExecuteNonQuery();
+
+        //    }
+        //}
+
+        public string Eliminar(string identificacion)
+        {
+            string result = string.Empty;
+            try
+            {
+
+                using (var command = Connection.CreateCommand())
+                {
+                    command.CommandText = "DELETE_CLIENTE";
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.Add(":C_CEDULA", OracleDbType.Varchar2).Value = identificacion;
+                    command.Parameters.Add(new OracleParameter("P_RESULT", OracleDbType.Varchar2, 50)).Direction = ParameterDirection.Output;
+                    command.ExecuteNonQuery();
+                    result = Convert.ToString(command.Parameters["P_RESULT"].Value);
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return result;
+        }
+
+        public Cliente Buscar(string identificacion)
+        {
+
+
+            using (var command = Connection.CreateCommand())
+            {
+                command.CommandText = "SELECT_CLIENTE_ID";
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Add(":C_CEDULA", OracleDbType.Varchar2).Value = identificacion;
+                command.Parameters.Add("C_CURSOR", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
+                using (var reader = command.ExecuteReader())
+                {
+
+                    reader.Read();
+                    return Mapear(reader);
+
+                }
+            }
+        }
+
 
     }
 }
