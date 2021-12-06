@@ -8,7 +8,7 @@ Aplicativo Desktop realizado por Gómez K y Menco D.
 <a href="https://www.facebook.com/kevingomezcantilo"><img src="https://icon-library.com/images/facebook-icon-25x25/facebook-icon-25x25-18.jpg" alt="Build Status" height=50></a>
 <br>
 <label><b>Sigueme en Instagram</b></label>
-<a href="https://www.instagram.com/gomez_sys"><img src="https://piunikaweb.com/wp-content/uploads/2021/05/Instagram-FI-new.jpg" alt="Build Status" height=50></a>
+<a href="https://www.instagram.com/gomez_sys"><img src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c521.png" alt="Build Status" height=50></a>
 
 </p>
 
